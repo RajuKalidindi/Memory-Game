@@ -16,6 +16,8 @@ function flipCard() {
     if(card1.dataset.name === card2.dataset.name) {
       card1.removeEventListener('click', flipCard);
       card2.removeEventListener('click', flipCard);
+      count++;
+      if(count == 8) console.log("Game Won");
 
       reset();
     }
@@ -38,8 +40,16 @@ function reset() {
   card2 = null;
 }
 
+(function shuffle() {
+  cards.forEach(card => {
+    var random = Math.floor(Math.random() * 16);
+    card.style.order = random;
+  });
+})()
+
 var flipped = false;
 var card1,card2;
 var lock = false;
+var count = 0;
 
 cards.forEach(card => card.addEventListener('click', flipCard));
