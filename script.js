@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.memory-card');
 
 function flipCard() {
   if(lock) return;
+  if(this === card1) return;
 
   this.classList.toggle('flip');
 
@@ -10,12 +11,13 @@ function flipCard() {
     card1 = this;
   }
   else {
-    flipped = false;
     card2 = this;
 
     if(card1.dataset.name === card2.dataset.name) {
       card1.removeEventListener('click', flipCard);
       card2.removeEventListener('click', flipCard);
+
+      reset();
     }
     else {
       lock = true;
@@ -23,10 +25,17 @@ function flipCard() {
         card1.classList.remove('flip');
         card2.classList.remove('flip');
 
-        lock = false;
+        reset();
       }, 1300);
     }
   }
+}
+
+function reset() {
+  flipped = false;
+  lock = false;
+  card1 = null;
+  card2 = null;
 }
 
 var flipped = false;
