@@ -17,7 +17,7 @@ function flipCard() {
       card1.removeEventListener('click', flipCard);
       card2.removeEventListener('click', flipCard);
       count++;
-      if(count == 8) console.log("Game Won");
+      if(count == 8) gameWon();
 
       reset();
     }
@@ -46,6 +46,11 @@ function reset() {
     card.style.order = random;
   });
 })()
+
+function gameWon() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
 
 var flipped = false;
 var card1,card2;
