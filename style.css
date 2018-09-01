@@ -15,10 +15,18 @@ img {
   height: 150px;
 }
 
+.center {
+  width: 200px;
+  height: 100px;
+  position: fixed;
+  left: calc(50% - 100px);
+}
+
 .memory-game {
   width: 640px;
   height: 640px;
-  margin: auto;
+  margin: 130px;
+  margin-left: 450px;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
