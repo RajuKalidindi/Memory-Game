@@ -31,7 +31,7 @@ function flipCard() {
       }, 1300);
     }
     moves++;
-    console.log(moves);
+    document.getElementById('moves').innerHTML = moves;
   }
 }
 
