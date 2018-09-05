@@ -30,6 +30,8 @@ function flipCard() {
         reset();
       }, 1300);
     }
+    moves++;
+    console.log(moves);
   }
 }
 
@@ -56,5 +58,6 @@ var flipped = false;
 var card1,card2;
 var lock = false;
 var count = 0;
+var moves = 0;
 
 cards.forEach(card => card.addEventListener('click', flipCard));
