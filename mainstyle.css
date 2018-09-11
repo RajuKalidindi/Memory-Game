@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  overflow:hidden;
+  background: #0483FD;
+}
+
+.center {
+  width: 350px;
+  height: 175px;
+  position: fixed;
+  left: calc(50% - 175px);
+}
+
+.element {
+  width: 640px;
+  height: 640px;
+  margin: 130px;
+  margin-left: 450px;
+}
+
+.choice {
+  margin: 100px;
+  margin-left: 300px;
+  position: relative;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
