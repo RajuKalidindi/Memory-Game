@@ -17,9 +17,9 @@ function flipCard() {
       card1.removeEventListener('click', flipCard);
       card2.removeEventListener('click', flipCard);
       count++;
-      if(count == 8) gameWon();
+      if(count == 8)gameWon();
 
-      reset();
+        reset();
     }
     else {
       lock = true;
@@ -50,8 +50,8 @@ function reset() {
 })()
 
 function gameWon() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
 
 var flipped = false;
@@ -59,5 +59,6 @@ var card1,card2;
 var lock = false;
 var count = 0;
 var moves = 0;
+var best = 100;
 
 cards.forEach(card => card.addEventListener('click', flipCard));
