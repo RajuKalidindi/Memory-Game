@@ -25,11 +25,20 @@ body {
   margin-left: 450px;
 }
 
+.text {
+  margin: 80px;
+  width: 500px;
+  margin-left: 130px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
+
 .choice {
   background-color: green;
   padding-left: 20px;
   width: 90px;
-  margin: 100px;
+  margin: 80px;
   margin-left: 280px;
   position: relative;
   font-size: 30px;
