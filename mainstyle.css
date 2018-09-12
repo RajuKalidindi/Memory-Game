@@ -26,10 +26,25 @@ body {
 }
 
 .choice {
+  background-color: green;
+  padding-left: 20px;
+  width: 90px;
   margin: 100px;
-  margin-left: 300px;
+  margin-left: 280px;
   position: relative;
   font-size: 30px;
   font-family: sans-serif;
   color: white;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
