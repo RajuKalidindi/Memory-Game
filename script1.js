@@ -52,6 +52,12 @@ function reset() {
 function gameWon() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+  document.getElementsByClassName("container")[0].style.WebkitFilter = 'blur(4px)';
+  document.getElementsByClassName("container")[0].style.filter= 'blur(4px)';
+  document.getElementsByClassName("container1")[0].style.WebkitFilter = 'blur(4px)';
+  document.getElementsByClassName("container1")[0].style.filter= 'blur(4px)';
+  document.getElementsByClassName("container2")[0].style.WebkitFilter = 'blur(4px)';
+  document.getElementsByClassName("container2")[0].style.filter= 'blur(4px)';
 }
 
 var flipped = false;

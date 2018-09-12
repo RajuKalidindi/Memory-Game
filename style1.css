@@ -11,6 +11,14 @@ body {
   background: #0483FD;
 }
 
+.blur-filter {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
 img {
   width: 100px;
   height: 150px;
