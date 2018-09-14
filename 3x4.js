@@ -59,6 +59,8 @@ function gameWon() {
   document.getElementsByClassName("container1")[0].style.filter= 'blur(4px)';
   document.getElementsByClassName("container2")[0].style.WebkitFilter = 'blur(4px)';
   document.getElementsByClassName("container2")[0].style.filter= 'blur(4px)';
+  document.getElementsByClassName("container3")[0].style.WebkitFilter = 'blur(4px)';
+  document.getElementsByClassName("container3")[0].style.filter= 'blur(4px)';
 }
 
 function bestscore() {
