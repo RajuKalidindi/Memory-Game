@@ -30,7 +30,7 @@ function flipCard() {
         reset();
       }, 1300);
     }
-    moves++;
+    if(c != 1) moves++;
     document.getElementById('moves').innerHTML = moves;
   }
 }
@@ -50,6 +50,7 @@ function reset() {
 })()
 
 function gameWon() {
+  bestscore();
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
   document.getElementsByClassName("container")[0].style.WebkitFilter = 'blur(4px)';
@@ -58,6 +59,18 @@ function gameWon() {
   document.getElementsByClassName("container1")[0].style.filter= 'blur(4px)';
   document.getElementsByClassName("container2")[0].style.WebkitFilter = 'blur(4px)';
   document.getElementsByClassName("container2")[0].style.filter= 'blur(4px)';
+  document.getElementsByClassName("container3")[0].style.WebkitFilter = 'blur(4px)';
+  document.getElementsByClassName("container3")[0].style.filter= 'blur(4px)';
+}
+
+function bestscore() {
+  moves += 1;
+  c = 1;
+  if(moves < best) {
+    best = moves;
+    var score = best.toString();
+    localStorage.setItem("score4x6", score);
+  }
 }
 
 var flipped = false;
@@ -65,6 +78,12 @@ var card1,card2;
 var lock = false;
 var count = 0;
 var moves = 0;
+var c = 0;
 var best = 100;
+
+document.getElementById("result").innerHTML = localStorage.getItem("score4x6");
+if(!isNaN(parseInt(localStorage.getItem("score4x6"), 10))){
+  best = parseInt(localStorage.getItem("score4x6"), 10);
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
