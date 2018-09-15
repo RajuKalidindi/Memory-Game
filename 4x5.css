@@ -33,6 +33,16 @@ img {
   padding-top: 100px;
 }
 
+.best {
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  font-family: sans-serif;
+  position: fixed;
+  left: 72%;
+  padding-top: 100px;
+}
+
 .memory-game {
   width: 800px;
   height: 640px;
