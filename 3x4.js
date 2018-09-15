@@ -69,7 +69,7 @@ function bestscore() {
   if(moves < best) {
     best = moves;
     var score = best.toString();
-    localStorage.setItem("score", score);
+    localStorage.setItem("score3x4", score);
   }
 }
 
@@ -81,9 +81,9 @@ var moves = 0;
 var c = 0;
 var best = 100;
 
-document.getElementById("result").innerHTML = localStorage.getItem("score");
-if(!isNaN(parseInt(localStorage.getItem("score"), 10))){
-  best = parseInt(localStorage.getItem("score"), 10);
+document.getElementById("result").innerHTML = localStorage.getItem("score3x4");
+if(!isNaN(parseInt(localStorage.getItem("score3x4"), 10))){
+  best = parseInt(localStorage.getItem("score3x4"), 10);
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
