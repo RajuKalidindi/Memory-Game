@@ -1,0 +1,16 @@
+# .gitignore
+
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# MacOS
+.DS_Store
+
+# debug
+npm-debug.log*
+
+# environment variables
+.env
